@@ -1,4 +1,5 @@
 @Library('jenkins-class-lib@main') _
+import org.opstree.Utils
 pipeline {
     agent any
 
@@ -13,6 +14,9 @@ pipeline {
             steps {
                 script {
                     sayHello('Adeel')
+
+                    def u = new Utils(this)
+                    u.runSampleMethod("Yuvraj")    
                 }
             }
         }
